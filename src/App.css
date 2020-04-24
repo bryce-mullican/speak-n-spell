@@ -1,7 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 #root {
-  height: 98%;
+  margin: 0;
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -12,13 +17,14 @@ body,
 }
 .App > div {
   display: flex;
-  flex: 1;
+  flex: 4;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .input {
+  position: relative;
   text-align: center;
   font-size: 172px;
 }
@@ -32,6 +38,48 @@ body,
   font-size: 45px;
 }
 
+.App .header {
+  flex: 1;
+  font-size: 50px;
+}
+.letter-wrap {
+  display: inline-block;
+  height: 100%;
+  text-align: left;
+}
+
+.letters {
+  padding: 10px;
+  border: 1px solid #ccc;
+  position: absolute;
+  top: 0;left: 0;
+  height: 100%;
+  width: 100%;
+}
 .word {
-  font-size: 100px;
+  position: relative;
+}
+.word span {
+  display: inline-block;
+  margin: 0 5px;
+  width: 170px;
+  height: 100%;
+  text-align: center;
+}
+
+.letters span {
+  color: white;
+  display: flex;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  width: 170px;
+  height: 100%;
+  float: left;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.letters.help span {
+  color: #ddd;
 }
